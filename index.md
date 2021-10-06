@@ -2,6 +2,16 @@
 
 p343 to p334
 
+Source
+<audio id="audio" controls="" preload="none">
+      <source id="wav" src="p343_004.wav">
+</audio>
+
+Target
+<audio id="audio" controls="" preload="none">
+      <source id="wav" src="p334_007.wav">
+</audio>
+
 Proposed system
 <audio id="audio" controls="" preload="none">
       <source id="wav" src="p343_004--p334_007.wav">
@@ -13,6 +23,16 @@ AGAIN-VC
 </audio>
 
 p343 to p362
+
+Source
+<audio id="audio" controls="" preload="none">
+      <source id="wav" src="p343_004.wav">
+</audio>
+
+Target
+<audio id="audio" controls="" preload="none">
+      <source id="wav" src="p362_010.wav">
+</audio>
 
 Proposed system
 <audio id="audio" controls="" preload="none">
