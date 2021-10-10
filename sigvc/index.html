@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Voice Conversion</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-5.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-image: url('gray.jpg');">
+    <div>
+      <h2 style="color:white;">&nbsp &nbsp INVERTIBLE VOICE CONVERSION</h2>
+      <!-- <a class="navbar-brand" href="#">Invertible Voice Conversion</a> -->
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="gray.jpg" class="d-block w-100" alt="...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Abstract</h1>
+            <hr >
+            <p>We propose an invertible deep learning framework called INVVC for voice conversion. It is designed against the possible threats that inherently come with voice conversion systems. Specifically, we develop an invertible framework that makes the source identity traceable. The framework is built on a series of invertible 1&#215;1 convolutions and flows consisting of affine coupling layers. We apply the proposed framework to one-to-one voice conversion and many-to-one conversion using parallel training data. Experimental results show that this approach yields impressive performance on voice conversion and, moreover, the converted results can be reversed back to the source inputs utilizing the same parameters as in forwarding. </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div> <h3> One-to-one Voice Conversion </h3></div>
+    <hr >
+    <table class="table table-borderless align-middle" >
+      <thead>
+        <tr>
+          <th class="text-center" scope="col">Source</th>
+          <th class="text-center" scope="col">Target</th>
+          <th class="text-center" scope="col">SIG-VC</th>
+          <th class="text-center" scope="col">AGAIN-VC</th>
+        </tr>
+      </thead>
+      <tbody>
+                            
+        <tr>
+          <td>
+            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
+              <source src="p343_004.wav">
+            </audio>
+          </td>
+          <td>
+            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
+              <source src="p362_010.wav">
+            </audio>
+          </td>
+          <td>
+            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
+              <source src="p343_004--p362_010.wav">
+            </audio> 
+          </td>
+        <td> 
+          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
+            <source src="p343_004_to_p362_010.wav">
+          </audio> 
+        </td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div><!-- /.container -->
+
+  <footer class="container">
+    <p>&copy; <a href="https://caizexin.github.io">Zexin Cai</a>&middot; <a href="https://scholars.duke.edu/person/MingLi">Ming Li</a> &middot; <a href="https://www.duke.edu">Duke University</a> </p>
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>Resource: <a href="http://festvox.org/cmu_arctic/">CMU ARCTIC Speech Database</a> </p>
+  </footer>
+  <!-- FOOTER -->
+</main>
+
+
+    <script src="bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
+© 2021 GitHub, Inc.
