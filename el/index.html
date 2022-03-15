@@ -36,8 +36,8 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-image: url('gray.jpg');">
     <div>
-      <h2 style="color:white;">&nbsp &nbsp SPEAKER INFORMATION GUIDED VOICE CONVERSION</h2>
-      <!-- <a class="navbar-brand" href="#">Speaker Information Guided Voice Conversion</a> -->
+      <h2 style="color:white;">&nbsp &nbsp Electrolaryngeal Speech Enhancement based on Bottleneck Feature Refinement and Voice Conversion</h2>
+      <!-- <a class="navbar-brand" href="#">Electrolaryngeal Speech Enhancement based on Bottleneck Feature Refinement and Voice Conversion</a> -->
     </div>
   </nav>
 </header>
@@ -54,10 +54,8 @@
             <h1>Abstract</h1>
             <hr >
             <p>
-              We propose a speaker information guided system for zero-shot voice conversion. By designing this system, we aim to obtain intermediate representations for speaker-content disentanglement of speech to better remove speaker information and get pure content information. Accordingly, our proposed framework contains a module that removes the speaker information from the acoustic feature of the source speaker. Moreover, speaker information control is added to our system to maintain the voice cloning performance. The proposed system is evaluated by subjective and objective metrics. Results show that our proposed system significantly reduces the trade-off problem in zero-shot voice conversion, while it also manages to have high spoofing power to the speaker verification system. 
+              Electrolarynx (EL) is a medical device to generate speech for people whose biological larynx is removed. However, the speech produced by the EL sounds unnatural and unintelligible due to the monotonous pitch and the mechanical excitation of the EL device. This paper proposes an end-to-end voice conversion method to enhance the EL speech to make it more natural and intelligible. We adopt a speaker-independent automatic speech recognition model to extract bottleneck features as the intermediate feature for enhancement. Multiple conversion stages are involved in our system: the bottleneck feature of EL speech is mapped by a parallel non-autoregressive model to the corresponding one of the normal speech. Then another conversion model maps normal speech's bottleneck feature directly to normal speech's Mel-spectrogram, followed by a MelGAN-based vocoder to convert the Mel-spectrogram into waveform. Experimental results show that the proposed method achieves state-of-the-art results with an impressive performance on naturalness and intelligibility.
               <br>
-              <br>
-              This page shows the synthesized audio by our proposed system, which is SIG-VC, and the baseline system, which is AGAIN-VC. All the synthesized audios are generated using only the source utterance and the target utternace.
             </p>
 
           </div>
@@ -72,56 +70,18 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div> <h3> Sample same as AGAIN-VC demo page</h3></div>
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p343_004</th>
-          <th class="text-center" scope="col">Target: p362_010</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="p343_004.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="p362_010.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="p343_004--p362_010.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="p343_004_to_p362_010.wav">
-          </audio> 
-        </td>
-        </tr>
-
-      </tbody>
-    </table>
-    
-  </div><!-- /.container -->
-  <br>  
+  
   <div> <h3> Randomly selected samples </h3></div>
     <hr >
     <table class="table table-borderless align-middle" >
       <thead>
         <tr>
-          <th class="text-center" scope="col">Source: p225_066</th>
-          <th class="text-center" scope="col">Target: p228_199</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
+          <th class="text-center" scope="col">EL speech</th>
+          <th class="text-center" scope="col">GMM system</th>
+          <th class="text-center" scope="col">BN-MEL system</th>
+          <th class="text-center" scope="col">BN-BN-MEL system</th>
+          <th class="text-center" scope="col">BN-BN-MEL-P system</th>
+          <th class="text-center" scope="col">target speech</th>
         </tr>
       </thead>
       <tbody>
@@ -129,479 +89,36 @@
         <tr>
           <td>
             <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p225_066.wav">
+              <source src="./demo/el/audio-116939.wav">
             </audio>
           </td>
           <td>
             <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p228_199.wav">
+              <source src="./demo/gmm/116939_cvf0_gmm_ppp2tf0.wav">
             </audio>
           </td>
           <td>
             <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p225_066--p228_199.wav">
+              <source src="./demo/bn-mel/audio-116939.wav">
             </audio> 
           </td>
-          <td> 
+          <td>
             <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-again/p225_066_to_p228_199.wav">
+              <source src="./demo/bn-bn-mel/audio-116939.wav">
+            </audio> 
+          </td>
+          <td>
+            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
+              <source src="./demo/bn-bn-mel-p/116939.wav.wav">
+            </audio> 
+          </td>
+          <td>
+            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
+              <source src="./demo/target/audio-116939.wav">
             </audio> 
           </td>
         </tr>
          </tbody>
-    </table> 
-    
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p228_199</th>
-          <th class="text-center" scope="col">Target: p225_066</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p228_199.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p225_066.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p228_199--p225_066.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p228_199_to_p225_066.wav">
-          </audio> 
-        </td>
-        </tr>
-         </tbody>
-    </table>
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p225_066</th>
-          <th class="text-center" scope="col">Target: p362_101</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p225_066.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p362_101.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p225_066--p362_101.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p225_066_to_p362_101.wav">
-          </audio> 
-        </td>
-        </tr>
-
-      </tbody>
-    </table>
-  
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p252_005</th>
-          <th class="text-center" scope="col">Target: p362_101</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p252_005.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p362_101.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p252_005--p362_101.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p252_005_to_p362_101.wav">
-          </audio> 
-        </td>
-        </tr>
-
-      </tbody>
-    </table>
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p228_199</th>
-          <th class="text-center" scope="col">Target: p261_036</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p228_199.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p261_036.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p228_199--p261_036.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p228_199_to_p261_036.wav">
-          </audio> 
-        </td>
-        </tr>
-
-      </tbody>
-    </table>
-        
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p252_005</th>
-          <th class="text-center" scope="col">Target: p261_036</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p252_005.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p261_036.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p252_005--p261_036.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p252_005_to_p261_036.wav">
-          </audio> 
-        </td>
-        </tr>
-
-      </tbody>
-    </table>
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p232_079</th>
-          <th class="text-center" scope="col">Target: p252_005</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p232_079.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p252_005.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p232_079--p252_005.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p232_079_to_p252_005.wav">
-          </audio> 
-        </td>
-        </tr>
-
-      </tbody>
-    </table>
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p228_199</th>
-          <th class="text-center" scope="col">Target: p343_006</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p228_199.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p343_006.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p228_199--p343_006.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p228_199_to_p343_006.wav">
-          </audio> 
-        </td>
-        </tr>
-         </tbody>
-    </table>
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p252_005</th>
-          <th class="text-center" scope="col">Target: p225_066</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p252_005.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p225_066.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p252_005--p225_066.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p252_005_to_p225_066.wav">
-          </audio> 
-        </td>
-        </tr>
-          </tbody>
-    </table>
-    
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p261_036</th>
-          <th class="text-center" scope="col">Target: p228_199</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p261_036.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p228_199.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p261_036--p228_199.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p261_036_to_p228_199.wav">
-          </audio> 
-        </td>
-        </tr>
-         </tbody>
-    </table>
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p252_005</th>
-          <th class="text-center" scope="col">Target: p228_199</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p252_005.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p228_199.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p252_005--p228_199.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p252_005_to_p228_199.wav">
-          </audio> 
-        </td>
-        </tr>
-         </tbody>
-    </table>
-    
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p334_002</th>
-          <th class="text-center" scope="col">Target: p360_001</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p334_002.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p360_001.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p334_002--p360_001.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p334_002_to_p360_001.wav">
-          </audio> 
-        </td>
-        </tr>
-         </tbody>
-    </table>
-    
-    
-    <hr >
-    <table class="table table-borderless align-middle" >
-      <thead>
-        <tr>
-          <th class="text-center" scope="col">Source: p252_005</th>
-          <th class="text-center" scope="col">Target: p232_079</th>
-          <th class="text-center" scope="col">SIG-VC</th>
-          <th class="text-center" scope="col">AGAIN-VC</th>
-        </tr>
-      </thead>
-      <tbody>
-                            
-        <tr>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p252_005.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/target/audio-p232_079.wav">
-            </audio>
-          </td>
-          <td>
-            <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-              <source src="./demo/selected-sig/p252_005--p232_079.wav">
-            </audio> 
-          </td>
-        <td> 
-          <audio controls="" preload="none" style="margin: 0 auto; display: block;">
-            <source src="./demo/selected-again/p252_005_to_p232_079.wav">
-          </audio> 
-        </td>
-        </tr>        
-      </tbody>
     </table>
     
   </div><!-- /.container -->
